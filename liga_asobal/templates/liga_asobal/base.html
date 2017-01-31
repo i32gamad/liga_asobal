@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <!-- Título e icono de la pestaña del navegador -->
+    <title>{%block title%} Liga ASOBAL{%endblock%}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %} <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+   
+
+</head>
+
+
+
+ <!-- Cuerpo de la pagina -->
+<body>
+
+  <!-- Navegación -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+           
+            <!--El menu se agrupa cuando se usa un dispositivo movil -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <h3><cite>LIGA ASOBAL</cite></h3>
+                    <span class="sr-only">Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:8080"> <!--Sitio al que direcciona la imagen -->
+                   <!-- <img src="imagenes/barsa.png" width="110" class="bordeimagen" >-->
+
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                    <h3 class="pull-right"><cite><strong>LIGA ASOBAL</strong></cite></h3>
+                    <br><br>
+                    <br>
+                    </li>
+                    <li>
+                        <a ALIGN=center href="{% url 'liga_asobal:lista_arbitros'%}"><strong>ARBITROS</strong></a>
+                    </li>
+                    <li>
+                        <a ALIGN=center href="{% url 'liga_asobal:lista_equipos'%}"><strong>EQUIPOS</strong></a>
+                    </li>
+                    <li>
+                        <a ALIGN=center href="{% url 'liga_asobal:lista_jugadores'%}"><strong>JUGADORES</strong></a>
+                    </li>
+                    <li>
+                        <a ALIGN=center href="{% url 'liga_asobal:lista_partidos'%}"><strong>PARTIDOS</strong></a>
+                    </li>
+                    
+                    
+                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<div class="container">
+    <div class="row"> <!-- La clase row indica el formato de la fila que contiene -->
+            <div class="col-lg-12">
+            <br><br><br><br><br>
+                <div class="well text-center">
+
+                    <strong><h3 ALIGN=center>{% block titulo %}{% endblock %}</h3></strong>
+                </div>
+            </div>
+            
+    </div>
+    {% block content %} {% endblock %}
+  
+  
+ <!-- Footer de la pagina web -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                </br>
+                </br>
+                </br>
+                </br>
+                    <font color="black"><p>Copyright &copy; Daniel Garrido Martinez</p></font>
+                </div>
+            </div>
+        </footer>
+
+</div>
+
+
+</body>
+</html>

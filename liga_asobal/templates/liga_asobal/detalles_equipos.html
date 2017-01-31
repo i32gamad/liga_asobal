@@ -1,0 +1,15 @@
+{%extends 'liga_asobal/base.html'%}
+
+{% block title %}Detalles de los equipos{% endblock title %}
+
+{% block content %}
+<h2>Detalles del Equipo</h2>
+<img src="http://127.0.0.1:8000/{{equipo.escudo}}" alt="Pagina de inicio" width="150">
+<p>Nombre Equipo: {{ equipo.nombre_equipo }}</p>
+<p>Partidos ganados: {{ equipo.partidos_ganados }}</p>
+<p>Partidos empatados: {{ equipo.partidos_empatados }}</p>
+<p>Partidos perdidos {{ equipo.partidos_perdidos }}</p>
+<p>Puntos: {{ equipo.puntos }}</p>
+
+{% endblock content %}
+

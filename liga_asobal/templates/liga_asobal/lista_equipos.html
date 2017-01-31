@@ -1,0 +1,25 @@
+{%extends 'liga_asobal/base.html'%}
+
+{%load static%}
+
+{%block titulo %}<img src="{%static 'img/liga.jpg'%}" alt="Mi imagen" width="700"/>{% endblock %}
+
+
+{% block content %}
+
+
+
+{%for equipo in equipos%}
+<div class="row">
+
+
+  <div class="col-md-12 text-center " style="background-color: #3b5998" ><h1> <a href = "{% url 'liga_asobal:detalles_equipos' equipo.id %}"> <font color=#FFCC6F>{{equipo.nombre_equipo}}</font></a> </h1></div>
+</div>
+
+{%endfor%}
+
+
+{% endblock %}
+
+
+

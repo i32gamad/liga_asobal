@@ -1,0 +1,28 @@
+{%extends 'liga_asobal/base.html'%}
+
+{%load static%}
+
+{%block titulo %}<img src="{%static 'img/partidos.jpg'%}" alt="Mi imagen" width="600"/>{% endblock %}
+
+
+{% block content %}
+
+
+
+{%for partido in partidos%}
+
+<div class="row">
+
+  <div class="col-md-12 text-center " style="background-color: #3b5998" >
+  	
+  	<h2><font color=#FFCC6F>{{partido.equipo_local}}</font> vs <font color="grey">{{partido.equipo_visitante}}</font></h2>
+
+  </div>
+
+
+</div>
+
+{%endfor%}
+
+{% endblock %}
+

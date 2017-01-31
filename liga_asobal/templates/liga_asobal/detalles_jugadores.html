@@ -1,0 +1,14 @@
+{%extends 'liga_asobal/base.html'%}
+
+{% block title %}Detalles del jugador{% endblock title %}
+
+{% block content %}
+<h2>Detalles del jugador</h2>
+<p>Nombre: {{ jugador.nombre_jugador }}</p>
+<p>Posicion: {{ jugador.posicion }}</p>
+<p>Edad: {{ jugador.edad }}</p>
+<p>Equipo al que pertenece: {{ jugador.equipo }}</p>
+<p>Nacionalidad: {{ jugador.nacionalidad }}</p>
+
+{% endblock content %}
+
